@@ -54,5 +54,8 @@
   },
   "files.associations": {
     "*.html.erb": "erb"
-  }
+  },
+  "githubPullRequests.ignoredPullRequestBranches": [
+    "main"
+  ]
 }

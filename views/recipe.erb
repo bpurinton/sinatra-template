@@ -1,0 +1,27 @@
+<div class="button">
+ <a href="/" class="find">Go back </a>
+</div>
+
+<div class="container">
+   <div class="row justify-content-center">
+      <% @results.each do |item| %>
+      <div class="col-md-6 col-lg-4 mb-4">
+         <div class="card" style="max-width: 24rem;">
+            <img src="<%= item["recipe"]["image"] %>" class="card-img-top" alt="...">
+            <div class="card-body">
+               <h4 class="card-title"><%= item["recipe"]["label"] %> </h4>
+               <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Ingredients:
+  </button>
+  <ul class="dropdown-menu"><%item["recipe"]["ingredientLines"].each do |ing|%>
+    <li><a class="dropdown-item" href="#"><%= ing %></a></li>
+     <%end%>
+  </ul>
+</div>
+            </div>
+         </div>
+      </div>
+      <%end%>
+   </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;">
+<% @recipe.each do |item| %>
+  <img src="<%= item["recipe"]["image"] %>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= item["recipe"]["label"] %> </h5>
+  </div>
+   <%end%>
+</div>
+
+ 
